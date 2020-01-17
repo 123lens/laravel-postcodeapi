@@ -27,6 +27,9 @@ class Address implements Arrayable
     /** @var null|float */
     protected $longitude;
 
+    /** @var @var null|array */
+    protected $apiRawResponse;
+
     /**
      * @param string $houseNo
      * @return $this
@@ -161,6 +164,25 @@ class Address implements Arrayable
     }
 
     /**
+     * @param array $data
+     * @return $this
+     */
+    public function setApiRawResponse(array $data)
+    {
+        $this->apiRawResponse = $data;
+        return $this;
+    }
+
+    /**
+     * @return array|null
+     */
+    public function getApiRawResponse(): ?array
+    {
+        return $this->apiRawResponse;
+    }
+
+
+    /**
      * @inheritDoc
      */
     public function toArray()
@@ -172,7 +194,8 @@ class Address implements Arrayable
             'municipality' => $this->getMunicipality(),
             'province' => $this->getProvince(),
             'latitude' => $this->getLatitude(),
-            'longitude' => $this->getLongitude()
+            'longitude' => $this->getLongitude(),
+            'api_raw' => $this->getApiRawResponse()
         ];
     }
 }
