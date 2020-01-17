@@ -51,7 +51,8 @@ class PostcodeNL extends Provider
             ->setMunicipality($response['municipality'])
             ->setProvince($response['province'])
             ->setLatitude($response['latitude'])
-            ->setLongitude($response['longitude']);
+            ->setLongitude($response['longitude'])
+            ->setApiRawResponse($response);
 
         return $address;
     }
