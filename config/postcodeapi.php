@@ -27,6 +27,17 @@ return [
         'key' => '',
         'code' => 'nl_NL',
     ],
+    'PostcodeApiNuV3' => [
+        'url' => 'https://api.postcodeapi.nu/v3/lookup/%s/%s',
+        'key' => '',
+        'code' => 'nl_NL'
+    ],
+    'PostcodeApiNuV3Sandbox' => [
+        'alias' => \nickurt\PostcodeApi\Providers\nl_NL\PostcodeApiNuV3::class,
+        'url' => 'https://sandbox.postcodeapi.nu/v3/lookup/%s/%s',
+        'key' => '',
+        'code' => 'nl_NL'
+    ],
     'PostcodeData' => [
         'url' => 'http://api.postcodedata.nl/v1/postcode/?postcode=%s&streetnumber=%s&ref=%s',
         'key' => '',
@@ -54,6 +65,12 @@ return [
         'code' => 'nl_BE',
     ],
 
+    'Algolia' => [
+        'url' => 'https://places-dsn.algolia.net/1/places/query',
+        'key' => '',
+        'secret' => '',
+        'code' => 'en_US'
+    ],
     'Bing' => [
         'url' => 'https://dev.virtualearth.net/REST/v1/Locations',
         'key' => '',
@@ -132,5 +149,15 @@ return [
         'url' => 'https://api-adresse.data.gouv.fr/search/?q=%s&postcode=%s&limit=1',
         'key' => '',
         'code' => 'fr_FR'
+    ],
+   'GeonamesDE' => [
+        'url' => 'http://api.geonames.org/postalCodeLookupJSON?postalcode=%s&country=DE&username=demo',
+        'key' => '',
+        'code' => 'de_DE'
+    ],
+   'ZippopotamusDE' => [
+        'url' => 'http://api.zippopotam.us/DE/%s',
+        'key' => '',
+        'code' => 'de_DE'
     ]
 ];
